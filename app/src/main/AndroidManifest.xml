@@ -9,10 +9,14 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.LanguageApp">
-        <activity android:name=".ColorsActivity" android:label="Colors"></activity>
-        <activity android:name=".PhrasesActivity" android:label="Phrases"/>
-        <activity android:name=".FamilyActivity" android:label="Family"/>
-        <activity android:name=".NumbersActivity" android:label="Numbers" />
+        <activity android:name=".ColorsActivity" android:label="Colors"
+            android:parentActivityName="com.example.languageapp.MainActivity"></activity>
+        <activity android:name=".PhrasesActivity" android:label="Phrases"
+            android:parentActivityName="com.example.languageapp.MainActivity"/>
+        <activity android:name=".FamilyActivity" android:label="Family"
+            android:parentActivityName="com.example.languageapp.MainActivity"/>
+        <activity android:name=".NumbersActivity" android:label="Numbers"
+            android:parentActivityName="com.example.languageapp.MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,6 +1,8 @@
 package com.example.languageapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
@@ -52,6 +54,24 @@ public class FamilyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.word_list);
+        ////////////////////*
+        /*
+
+        Toolbar myChildToolbar =
+                (Toolbar) findViewById(R.id.my_child_toolbar);
+        setSupportActionBar(myChildToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
+
+
+
+        */
+
+        //////////////////////
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
        final ArrayList<numberstrail>words=new ArrayList<numberstrail>();
        words.add(new numberstrail( "father", "әpә",R.drawable.family_father,R.raw.family_father));
