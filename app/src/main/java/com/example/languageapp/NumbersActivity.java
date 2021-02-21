@@ -19,6 +19,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
+    /*
     private MediaPlayer mMediaPlayer;
     private AudioManager mAudioManager;
    private MediaPlayer.OnCompletionListener mCompletionlistener= new MediaPlayer.OnCompletionListener() {
@@ -53,13 +54,16 @@ public class NumbersActivity extends AppCompatActivity {
            }
        }
    };
-
+*/
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
-        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        setContentView(R.layout.activity_category);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, new NumbersFragment())
+                .commit();
+       /* mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         final ArrayList<numberstrail> words = new ArrayList<numberstrail>();
 
         words.add(new numberstrail("One", "Lutti", R.drawable.number_one, R.raw.number_one));
@@ -94,15 +98,17 @@ public class NumbersActivity extends AppCompatActivity {
                }};
 
         });
+        */
+
     }
 
-    @Override
+   /* @Override
     protected void onStop() {
         super.onStop();
         releasemediaplayer();
-    }
+    }*/
 
-    void releasemediaplayer()
+   /* void releasemediaplayer()
     {
         if(mMediaPlayer!=null) {
             mMediaPlayer.release();
@@ -111,5 +117,5 @@ public class NumbersActivity extends AppCompatActivity {
             // unregisters the AudioFocusChangeListener so we don't get anymore callbacks.
             mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
         }
-    }
+    }*/
 };

@@ -13,6 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class ColorsActivity extends AppCompatActivity {
+    /*
     private MediaPlayer mMediaPlayer;
     private AudioManager mAudioManager;
     private MediaPlayer.OnCompletionListener moncompletion=new MediaPlayer.OnCompletionListener() {
@@ -44,13 +45,15 @@ public class ColorsActivity extends AppCompatActivity {
                 releasemediaplayer();
             }
         }
-    };
+    };*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.activity_category);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new ColorsFragment()).commit();
+        /*
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
        final ArrayList<numberstrail>words=new ArrayList<numberstrail>();
 
@@ -77,15 +80,15 @@ public class ColorsActivity extends AppCompatActivity {
                 mMediaPlayer.start();
                 mMediaPlayer.setOnCompletionListener( moncompletion);
             }}
-        });
+        });*/
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        releasemediaplayer();
+       // releasemediaplayer();
     }
-
+/*
     void releasemediaplayer()
     {
         if(mMediaPlayer!=null)
@@ -94,5 +97,5 @@ public class ColorsActivity extends AppCompatActivity {
             mMediaPlayer=null;
         }
         mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
-    }
+    }*/
 }

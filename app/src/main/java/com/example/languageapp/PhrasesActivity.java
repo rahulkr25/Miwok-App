@@ -13,6 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
+    /*
     private MediaPlayer mMediaPlayer;
     private AudioManager mAudioManager;
     private MediaPlayer.OnCompletionListener moncompletion=new MediaPlayer.OnCompletionListener() {
@@ -45,11 +46,13 @@ public class PhrasesActivity extends AppCompatActivity {
          }
      }
  };
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.activity_category);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new PhrasesFragment()).commit();
+        /*
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
       final   ArrayList<numberstrail>words=new ArrayList<numberstrail>();
         words.add(new numberstrail("Where are you going?", "minto wuksus",R.raw.phrase_where_are_you_going));
@@ -78,16 +81,16 @@ public class PhrasesActivity extends AppCompatActivity {
                 mMediaPlayer.start();
                 mMediaPlayer.setOnCompletionListener( moncompletion);
             }}
-        });
+        });*/
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        releasemediaplayer();
+        //releasemediaplayer();
     }
 
-    void releasemediaplayer()
+   /* void releasemediaplayer()
     {
         if(mMediaPlayer!=null)
         {
@@ -95,5 +98,5 @@ public class PhrasesActivity extends AppCompatActivity {
             mMediaPlayer=null;
             mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
         }
-    }
+    }*/
 }
