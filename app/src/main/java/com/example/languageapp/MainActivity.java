@@ -33,34 +33,6 @@ public class MainActivity extends AppCompatActivity {
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
-         //mediaPlayer1 = MediaPlayer.create(this, R.raw.songs);
-    }
-/*
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void opennumbers(View view) throws IOException {
-
-
-        Intent i=new Intent(this,NumbersActivity.class);
-        startActivity(i);
 
     }
-
-    public void openfamily(View view) {
-
-        Intent i=new Intent(this,FamilyActivity.class);
-        startActivity(i);
-
-    }
-    public void opencolors(View view) {
-
-        Intent i=new Intent(this,ColorsActivity.class);
-        startActivity(i);
-
-    }
-    public void openphrases(View view) {
-        Intent i=new Intent(this,PhrasesActivity.class);
-        startActivity(i);
-    }
-    */
-
 }
